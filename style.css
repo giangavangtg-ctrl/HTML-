@@ -1,0 +1,98 @@
+/* Thiết lập cơ bản cho toàn bộ trang */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Màu nền mờ cho dễ nhìn layout */
+    color: #333;
+}
+
+/* 1. Bộ chọn #main: Cố định độ rộng 1000px và căn giữa màn hình */
+#main {
+    width: 1000px;
+    margin: 0 auto; 
+    background-color: #ffffff;
+}
+
+/* 2. Bộ chọn #head: Chiều cao, nền, viền và khoảng cách dưới */
+#head {
+    height: 120px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 4. Bộ chọn #head-link: Vùng liên kết đầu trang */
+#head-link {
+    height: 40px;
+    background-color: #343a40;
+    margin-bottom: 10px;
+}
+
+#head-link ul {
+    list-style-type: none;
+    display: flex;
+}
+
+#head-link ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: 20px;
+}
+
+#head-link ul li a:hover {
+    background-color: #495057;
+}
+
+/* 6. Bộ chọn #left: Độ rộng 200px, dạt sang trái */
+#left {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+}
+
+/* 8. Bộ chọn #content: Chiếm phần không gian giữa */
+/* 1000px(tổng) - 200px(left) - 200px(right) - 20px(margin 2 bên) = 580px */
+#content {
+    width: 580px;
+    min-height: 400px;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    margin: 0 10px; /* Cách vùng left và right mỗi bên 10px */
+    padding: 15px;
+}
+
+/* 8. Bộ chọn #right: Độ rộng 200px, dạt sang phải */
+#right {
+    width: 200px;
+    min-height: 400px;
+    float: right;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+}
+
+/* 10. Bộ chọn #footer: Xoá float và căn dưới cùng */
+#footer {
+    clear: both; /* Cực kỳ quan trọng: Bỏ qua ảnh hưởng của float từ 3 cột ở trên */
+    height: 60px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px; /* Tạo khoảng cách với khối nội dung phía trên */
+}
